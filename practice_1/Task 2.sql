@@ -15,7 +15,7 @@ CREATE TABLE `Employees` (
 
 ALTER TABLE `Employees`
 	DROP COLUMN `MiddleName`,
-	ADD COLUMN `Position` VARCHAR(100) NOT NULL CHECK(`Position` IS NOT NULL);
+	ADD COLUMN `Position` VARCHAR(100) CHECK(`Position` IS NOT NULL);
 	
 
 
