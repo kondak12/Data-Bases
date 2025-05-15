@@ -1,0 +1,19 @@
+USE `seschool_09`;
+
+
+CREATE TABLE `Customers`(
+	`CustomerID` INT PRIMARY KEY AUTO_INCREMENT,
+	`FirstName` VARCHAR(100) NOT NULL,
+	`LastName` VARCHAR(100) NOT NULL,
+	`Email` VARCHAR(150),
+	`PhoneNumber` VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE `Orders`(
+	`OrderID` INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+	`OrderDate` DATETIME NOT NULL,
+	`TotalAmount` DECIMAL(10, 2) NOT NULL,
+	`CustomerID` INT NOT NULL,
+	FOREIGN KEY (`CustomerID`)
+	REFERENCES `Customers`(`CustomerID`)
+);
