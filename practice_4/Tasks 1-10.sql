@@ -54,7 +54,11 @@ SELECT `Users`.`ID_user` FROM `Users`
 	INNER JOIN `Reports` ON (`Users`.`ID_user` = `Reports`.`ID_user`)
 	WHERE `Users`.`country` = 'Россия'
 <<<<<<< HEAD
+<<<<<<< HEAD
 GROUP BY `Users`.`ID_user`
+=======
+	GROUP BY `Users`.`ID_user`
+>>>>>>> 1072d5b4bbb0d7c55652874ab70deea0ce5ecd8b
 =======
 	GROUP BY `Users`.`ID_user`
 >>>>>>> 1072d5b4bbb0d7c55652874ab70deea0ce5ecd8b
@@ -64,8 +68,13 @@ GROUP BY `Users`.`ID_user`
 -- №9
 SELECT `Users`.`name` FROM `Users`
 <<<<<<< HEAD
+<<<<<<< HEAD
 	LEFT JOIN `Reports` ON (`Users`.`ID_user` = `Reports`.`ID_user`)
 	WHERE `Reports`.`ID_user` IS NULL;
+=======
+	INNER JOIN `Reports` ON (`Users`.`ID_user` = `Reports`.`ID_user`)
+	WHERE `Reports`.`ID_report` IS NULL;
+>>>>>>> 1072d5b4bbb0d7c55652874ab70deea0ce5ecd8b
 =======
 	INNER JOIN `Reports` ON (`Users`.`ID_user` = `Reports`.`ID_user`)
 	WHERE `Reports`.`ID_report` IS NULL;
